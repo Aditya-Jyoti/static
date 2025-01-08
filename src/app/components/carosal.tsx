@@ -1,13 +1,18 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 
 const ImageCarousel = () => {
   // Initialize with proper public directory path
-  const imagesInit = Array.from({ length: 9 }, (_, i) => `/images/eventimages/${i + 1}.jpg`);
-  
+  const imagesInit = Array.from(
+    { length: 9 },
+    (_, i) => `/images/eventimages/${i + 1}.jpg`
+  );
+
   const [images, setImages] = useState(imagesInit);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState(Array(imagesInit.length).fill(false));
+  const [imagesLoaded, setImagesLoaded] = useState(
+    Array(imagesInit.length).fill(false)
+  );
   const [hasError, setHasError] = useState(false);
 
   // Preload images and track their loading status
@@ -18,16 +23,14 @@ const ImageCarousel = () => {
           const img = new Image();
           img.src = src;
           img.onload = () => {
-            setImagesLoaded(prev => {
+            setImagesLoaded((prev) => {
               const newState = [...prev];
               newState[index] = true;
               return newState;
             });
-            resolve();
           };
           img.onerror = () => {
             setHasError(true);
-            resolve();
           };
         });
       });
@@ -40,7 +43,7 @@ const ImageCarousel = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (imagesLoaded.some(loaded => loaded)) {
+      if (imagesLoaded.some((loaded) => loaded)) {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       }
     }, 5000);
@@ -49,7 +52,9 @@ const ImageCarousel = () => {
   }, [images.length, imagesLoaded]);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   const handleNext = () => {
@@ -64,7 +69,7 @@ const ImageCarousel = () => {
     );
   }
 
-  if (!imagesLoaded.some(loaded => loaded)) {
+  if (!imagesLoaded.some((loaded) => loaded)) {
     return (
       <div className="w-full max-w-[600px] h-[300px] flex items-center justify-center bg-gray-100 rounded-lg">
         <p className="text-gray-500">Loading images...</p>
@@ -74,18 +79,15 @@ const ImageCarousel = () => {
 
   return (
     <div className="relative w-full max-w-[600px] h-[300px] overflow-hidden rounded-lg">
-      <div 
+      <div
         className="absolute flex transition-transform duration-700 ease-in-out h-full"
         style={{
           transform: `translateX(-${currentIndex * 100}%)`,
-          width: `${images.length * 100}%`
+          width: `${images.length * 100}%`,
         }}
       >
         {images.map((image, index) => (
-          <div
-            key={index}
-            className="relative w-full h-full flex-shrink-0"
-          >
+          <div key={index} className="relative w-full h-full flex-shrink-0">
             <img
               src={image}
               alt={`Slide ${index + 1}`}
@@ -116,7 +118,7 @@ const ImageCarousel = () => {
           <button
             key={index}
             className={`w-2 h-2 rounded-full transition-colors ${
-              currentIndex === index ? 'bg-white' : 'bg-white/50'
+              currentIndex === index ? "bg-white" : "bg-white/50"
             }`}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Go to slide ${index + 1}`}
