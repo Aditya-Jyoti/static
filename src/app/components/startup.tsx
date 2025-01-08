@@ -1,5 +1,5 @@
-import React from 'react';
-import ImageAccordion from './ui/imageAccordian';
+import React from "react";
+import ImageAccordion from "./ui/imageAccordian";
 
 const Startup = () => {
   const sections = [
@@ -41,6 +41,7 @@ const Startup = () => {
       {sections.map((section, index) => (
         <div
           key={index}
+
           className="w-screen min-h-screen max-w-4xl mb-10 lg:hidden text-center"
         >
           <h2 className="text-3xl font-semibold text-white mb-6">
@@ -49,6 +50,7 @@ const Startup = () => {
 
           {/* Grid layout for smaller screens */}
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:hidden">
+
             {images
               .filter((image) => image.section === section.id)
               .map((image, idx) => (
@@ -66,6 +68,7 @@ const Startup = () => {
                   />
                 </a>
               ))}
+
           </div>
         </div>
       ))}
@@ -81,5 +84,6 @@ const Startup = () => {
 export default Startup;
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&display=swap');
-</style>
+  @import
+  url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&display=swap');
+</style>;

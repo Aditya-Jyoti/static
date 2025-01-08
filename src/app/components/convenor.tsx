@@ -13,31 +13,31 @@ const teamData = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r p-8 flex flex-col items-center">
+    <div className="p-8 flex flex-col items-center">
       <div className="w-full text-center mb-12">
         <h1 className="md:text-7xl text-5xl font-bold">Convenors</h1>
       </div>
 
       <section className="flex md:flex-row flex-col gap-16">
         <Card
-          name={teamData[0].name}
-          designation={teamData[0].designation}
-          img={teamData[0].img}
+          name="Dr. Sasikumar M"
+          designation="Director, V-NEST"
+          img="/ppl/sasi.jpg"
         />
         <Card
-          name={teamData[0].name}
-          designation={teamData[0].designation}
-          img={teamData[0].img}
+          name="Dr. Ravi V "
+          designation="Assistant Director, V-NEST (IIC)"
+          img="/ppl/ravi.png"
         />
         <Card
-          name={teamData[0].name}
-          designation={teamData[0].designation}
-          img={teamData[0].img}
+          name="Dr Karthiyaini S"
+          designation="Assistant Director, V-NEST (EDC)"
+          img="/ppl/kath.jpg"
         />
         <Card
-          name={teamData[0].name}
-          designation={teamData[0].designation}
-          img={teamData[0].img}
+          name="Dr. Jayarangan L"
+          designation="Manager, Incubation"
+          img="/ppl/jaya.jpeg"
         />
       </section>
     </div>

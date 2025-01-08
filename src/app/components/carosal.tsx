@@ -1,132 +1,63 @@
-// "use client";
-// import React, { useEffect, useState } from "react";
+"use client";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
-// const ImageCarousel = () => {
-//   // Initialize with proper public directory path
-//   const imagesInit = Array.from(
-//     { length: 9 },
-//     (_, i) => `/images/eventimages/${i + 1}.jpg`
-//   );
+interface CarouselProps {
+  images: string[];
+}
 
-//   const [images, setImages] = useState(imagesInit);
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const [imagesLoaded, setImagesLoaded] = useState(
-//     Array(imagesInit.length).fill(false)
-//   );
-//   const [hasError, setHasError] = useState(false);
+const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalImages = images.length;
 
-//   // Preload images and track their loading status
-//   useEffect(() => {
-//     const preloadImages = () => {
-//       const imagePromises = images.map((src, index) => {
-//         return new Promise((resolve) => {
-//           const img = new Image();
-//           img.src = src;
-//           img.onload = () => {
-//             setImagesLoaded((prev) => {
-//               const newState = [...prev];
-//               newState[index] = true;
-//               return newState;
-//             });
-//           };
-//           img.onerror = () => {
-//             setHasError(true);
-//           };
-//         });
-//       });
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalImages);
+    }, 3000);
 
-//       Promise.all(imagePromises);
-//     };
+    return () => clearInterval(timer);
+  }, [totalImages]);
 
-//     preloadImages();
-//   }, [images]);
+  const getStyle = (offset: number) => {
+    const translateX = offset * 100; // Offset-based positioning
+    const scale = 1 - Math.abs(offset) * 0.2; // Scale down distant images
+    const opacity = 1 - Math.abs(offset) * 0.3; // Reduce opacity for distant images
+    const zIndex = 5 - Math.abs(offset); // Adjust z-index
 
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       if (imagesLoaded.some((loaded) => loaded)) {
-//         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-//       }
-//     }, 5000);
+    return {
+      transform: `translateX(${translateX}%) scale(${scale})`,
+      opacity,
+      zIndex,
+    };
+  };
 
-//     return () => clearInterval(timer);
-//   }, [images.length, imagesLoaded]);
+  return (
+    <div className="relative h-96 my-12 overflow-hidden ">
+      <div className="relative flex h-full w-full items-center justify-center">
+        {images.map((image, index) => {
+          const offset = (index - currentIndex + totalImages) % totalImages;
+          const adjustedOffset =
+            offset > totalImages / 2 ? offset - totalImages : offset;
 
-//   const handlePrev = () => {
-//     setCurrentIndex(
-//       (prevIndex) => (prevIndex - 1 + images.length) % images.length
-//     );
-//   };
+          return (
+            <div
+              key={index}
+              className="absolute h-72 w-72 rounded-lg object-cover shadow-xl transition-all duration-700 ease-in-out"
+              style={getStyle(adjustedOffset)}
+            >
+              <Image
+                src={`/car/${image}`}
+                alt={`Slide ${index + 1}`}
+                className="h-full w-full rounded-lg object-cover"
+                width={250}
+                height={250}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-//   const handleNext = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-//   };
-
-//   if (hasError) {
-//     return (
-//       <div className="w-full max-w-[600px] h-[300px] flex items-center justify-center bg-gray-100 rounded-lg">
-//         <p className="text-gray-500">Failed to load images</p>
-//       </div>
-//     );
-//   }
-
-//   if (!imagesLoaded.some((loaded) => loaded)) {
-//     return (
-//       <div className="w-full max-w-[600px] h-[300px] flex items-center justify-center bg-gray-100 rounded-lg">
-//         <p className="text-gray-500">Loading images...</p>
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className="relative w-full max-w-[600px] h-[300px] overflow-hidden rounded-lg">
-//       <div
-//         className="absolute flex transition-transform duration-700 ease-in-out h-full"
-//         style={{
-//           transform: `translateX(-${currentIndex * 100}%)`,
-//           width: `${images.length * 100}%`,
-//         }}
-//       >
-//         {images.map((image, index) => (
-//           <div key={index} className="relative w-full h-full flex-shrink-0">
-//             <img
-//               src={image}
-//               alt={`Slide ${index + 1}`}
-//               className="absolute w-full h-full object-cover"
-//             />
-//           </div>
-//         ))}
-//       </div>
-
-//       <button
-//         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 rounded-full w-8 h-8 shadow-lg transition-colors text-xl font-bold"
-//         onClick={handlePrev}
-//         aria-label="Previous slide"
-//       >
-//         ‹
-//       </button>
-
-//       <button
-//         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 rounded-full w-8 h-8 shadow-lg transition-colors text-xl font-bold"
-//         onClick={handleNext}
-//         aria-label="Next slide"
-//       >
-//         ›
-//       </button>
-
-//       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-//         {images.map((_, index) => (
-//           <button
-//             key={index}
-//             className={`w-2 h-2 rounded-full transition-colors ${
-//               currentIndex === index ? "bg-white" : "bg-white/50"
-//             }`}
-//             onClick={() => setCurrentIndex(index)}
-//             aria-label={`Go to slide ${index + 1}`}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ImageCarousel;
+export default ImageCarousel;
