@@ -20,7 +20,7 @@ const Startup = () => {
     { id: 9, src: '/images/CRACKUBE LOGO JPG TRANSPARENT.png', section: 'others', href: '' },
     { id: 10, src: '/images/FEYNMAN TECHSOL.png', section: 'others', href: '' },
     { id: 11, src: '/images/Chakaralaya Analytics.png', section: 'others', href: '' },
-    { id: 12, src: '/images/INCIOTEK.jpg', section: 'others', href: '' },
+    { id: 12, src: '/images/INICIOTEK.jpg', section: 'others', href: '' },
   ];
 
   return (
