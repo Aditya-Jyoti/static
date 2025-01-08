@@ -66,7 +66,6 @@ export default function Home() {
         <Teampage/>
         <Startup/>
       </section>
-
     </section>
 
   );
