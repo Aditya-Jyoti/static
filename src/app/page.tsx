@@ -2,6 +2,8 @@
 import Teampage from "./components/convenor"
 import About from "./components/About";
 import Startup from "./components/startup";
+import Carosal from "./components/carosal"
+
 
 export default function Home() {
   return (
@@ -60,10 +62,11 @@ export default function Home() {
       {/* rest of the data */}
       <section className="gradient p-12">
         <About />
+        <Carosal/>
         <Teampage/>
+        <Startup/>
       </section>
 
-      <Startup/>
     </section>
 
   );
