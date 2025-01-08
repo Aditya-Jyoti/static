@@ -18,7 +18,7 @@ const Startup = () => {
     { id: 7, src: '/images/Centurion Mobility.jpeg', section: 'robotics', href: 'https://centurionmobility.com/' },
     { id: 8, src: '/images/STEMTEC_logo.jpg', section: 'robotics', href: 'https://www.linkedin.com/company/stemtec-ai-robotics' },
     { id: 9, src: '/images/CRACKUBE LOGO JPG TRANSPARENT.png', section: 'others', href: '' },
-    { id: 10, src: '/images/FEYNMAN TECHSOL.png', section: 'others', href: '' },
+    { id: 10, src: '/images/FEYNMAN_TECHSOL.png', section: 'others', href: '' },
     { id: 11, src: '/images/Chakaralaya Analytics.png', section: 'others', href: '' },
     { id: 12, src: '/images/INICIOTEK.jpg', section: 'others', href: '' },
   ];

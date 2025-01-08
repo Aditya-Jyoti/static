@@ -11,7 +11,7 @@ const ImageAccordion = () => {
         { src: "/images/JIVAN.png", href: "https://www.jivanhealth.in/aboutus" },
         { src: "/images/CITTAA.jpg", href: "https://cittaa.in/" },
         { src: "/images/Quinproc.jpeg", href: "https://quinproc.co.in/" },
-        {src:"LOGO_MEDxAI_Innovations.jpg", href:"https://www.medxai-innovations.com/"}
+        {src:"/images/LOGO_MEDxAI_Innovations.jpg", href:"https://www.medxai-innovations.com/"}
       ],
     },
     {
@@ -27,9 +27,9 @@ const ImageAccordion = () => {
       title: "Others",
       images: [
         { src: "/images/CRACKUBE LOGO JPG TRANSPARENT.png", href: "" },
-        { src: "FEYNMAN TECHSOL.png", href: "" },
+        { src: "/images/FEYNMAN_TECHSOL.png", href: "" },
         { src: "/images/Chakaralaya Analytics.png", href:"" },
-        {src:"images/INCIOTEK.jpg", href:''},
+        {src:"images/INICIOTEK.jpg", href:''},
       ],
     },
   ];
