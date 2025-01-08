@@ -4,7 +4,7 @@ export default function About() {
       <div className="flex md:flex-row flex-col gap-4 justify-between">
         <div className="flex flex-col gap-4 ">
           <span className="md:text-7xl text-4xl font-bold">About V-NEST</span>
-          <span className="md:text-3xl text-xl">
+          <span className="md:text-2xl text-xl font-normal">
             VIT Chennai boasts a vibrant innovation ecosystem through V-NEST VIT
             Chennai Startup and Research Foundation, that supports students,
             faculty and outside entrepreneurs in transforming their ideas into
@@ -27,7 +27,7 @@ export default function About() {
           <span className="md:text-7xl text-4xl font-bold md:text-right">
             About VIT
           </span>
-          <span className="md:text-3xl text-xl md:text-right">
+          <span className="md:text-2xl text-xl font-normal md:text-right">
             VIT Chennai was established in 2010 and has since become a beacon of
             excellence in higher education. Spearheaded by Vice President Dr. G.
             V. Selvam, a pioneering visionary who laid the foundation of VIT

@@ -84,7 +84,8 @@ export default function Home() {
           <h1 className="md:text-7xl text-5xl font-bold flex w-full items-center justify-center md:-mb-24 mt-12">
             Benefits
           </h1>
-          <Image src="/graph.png" alt="graph" width={1600} height={500} />
+          <Image src="/graph.png" alt="graph" width={1600} height={500} className="md:flex hidden" />
+          <Image src="/ben2.png" alt="graph" width={1600} height={1600}  className="md:hidden flex h-full my-8"/>
         </div>
 
         <div className="md:-mt-16">
