@@ -1,9 +1,8 @@
-import Image from "next/image";
+
 import Teampage from "./components/convenor"
 
 export default function Home() {
   return (
-<<<<<<< Updated upstream
     <section>
       {/* splash page */}
       {/* desktop */}
@@ -14,7 +13,7 @@ export default function Home() {
           backgroundPosition: "10% 10%",
         }}
       >
-        <div className="flex flex-col items-center mt-[8%]">
+      <div className="flex flex-col items-center mt-[8%]">
           <span className="md:text-[8rem] text-[4rem]">V-NEST</span>
           <span className="md:text-[3rem] md:-mt-10 text-[1rem]">
             VIT Chennai Startup and Research Foundation
@@ -53,14 +52,11 @@ export default function Home() {
           </a>
         </div>
       </section>
-    </section>
-=======
-    <div>
+
       <div id="team" className='w-full'>
         <Teampage/>
       </div>
-    
-    </div>
->>>>>>> Stashed changes
+    </section>
+
   );
 }

@@ -1,24 +1,37 @@
-import Card from "./components/ui/Card";
+import Card from "@/app/components/ui/card";
 
 const teamData = [
-  { name: "John Doe", designation: "Developer" },
-  { name: "Jane Smith", designation: "Designer" },
-  { name: "Mike Brown", designation: "Project Manager" },
-  { name: "Emily White", designation: "QA Engineer" },
-  { name: "Chris Green", designation: "Backend Developer" },
-  { name: "Anna Black", designation: "Frontend Developer" },
-  { name: "Sarah Blue", designation: "DevOps Engineer" },
-  { name: "Tom Yellow", designation: "Product Manager" },
+  { name: "John Doe", designation: "Developer", img: "/images/john.jpg" },
+  { name: "Jane Smith", designation: "Designer", img: "/images/jane.jpg" },
+  { name: "Mike Brown", designation: "Project Manager", img: "/images/mike.jpg" },
+  { name: "Emily White", designation: "QA Engineer", img: "/images/emily.jpg" },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-800 to-purple-900 p-8">
-      <h1 className="text-center text-white text-3xl font-bold mb-8">V-NEST Team</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {teamData.map((member, index) => (
-          <Card key={index} name={member.name} designation={member.designation} />
-        ))}
+    <div className="min-h-screen bg-gradient-to-r p-8 flex flex-col items-center">
+    
+    
+        <div className="w-full text-center mb-12">
+          <h1 className="text-purple-600 text-3xl font-bold tracking-widest">V-NEST Team</h1>
+        </div>
+
+
+    
+      <div className="flex flex-col items-center mb-16">
+      
+        <div className="flex justify-center mb-4">
+          <Card name={teamData[0].name} designation={teamData[0].designation} img={teamData[0].img} />
+        </div>
+     
+        <div className="flex justify-center gap-8 mb-4">
+          <Card name={teamData[1].name} designation={teamData[1].designation} img={teamData[1].img} />
+          <Card name={teamData[2].name} designation={teamData[2].designation} img={teamData[2].img} />
+        </div>
+   
+        <div className="flex justify-center mb-4">
+          <Card name={teamData[3].name} designation={teamData[3].designation} img={teamData[3].img} />
+        </div>
       </div>
     </div>
   );
