@@ -93,13 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="w-full flex flex-col items-center justify-center font-bold py-16">
-        <span className="text-2xl">&copy; V-NEST 2025-26</span>
-        <span className="text-sm font-normal">
-          made with love by{" "}
-          <a href="https://github.com/computerSocietyVITC/" className="font-semibold" target="_blank">team vnest</a>
-        </span>
-      </footer>
     </section>
   );
 }
