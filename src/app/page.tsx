@@ -1,7 +1,9 @@
 
 import Teampage from "./components/convenor"
 import About from "./components/About";
+import Startup from "./components/startup";
 import Carosal from "./components/carosal"
+
 
 export default function Home() {
   return (
@@ -62,7 +64,9 @@ export default function Home() {
         <About />
         <Carosal/>
         <Teampage/>
+        <Startup/>
       </section>
+
     </section>
 
   );
