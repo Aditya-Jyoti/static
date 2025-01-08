@@ -42,7 +42,7 @@ const Startup = () => {
         <div
           key={index}
 
-          className="w-screen min-h-screen max-w-4xl mb-10 lg:hidden text-center"
+          className="w-screen  max-w-4xl mb-10 lg:hidden text-center"
         >
           <h2 className="text-3xl font-semibold text-white mb-6">
             {section.name}
