@@ -26,7 +26,7 @@ export default function Home() {
             <span className="md:text-[1.5rem] text-lg">
               we nurture you to fly high
             </span>
-            <a className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
+            <a href="#about" className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
               know more
             </a>
           </div>
@@ -52,7 +52,7 @@ export default function Home() {
             <span className="md:text-[1.5rem] text-lg">
               we nurture you to fly high
             </span>
-            <a className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
+            <a href="#about" className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
               know more
             </a>
           </div>

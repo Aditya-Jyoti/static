@@ -32,7 +32,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative h-96 my-12 overflow-hidden ">
+    <div id="gallery" className="relative h-96 my-12 overflow-hidden ">
       <div className="relative flex h-full w-full items-center justify-center">
         {images.map((image, index) => {
           const offset = (index - currentIndex + totalImages) % totalImages;
