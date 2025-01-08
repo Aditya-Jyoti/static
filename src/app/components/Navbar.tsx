@@ -1,9 +1,9 @@
 export default function Navbar() {
   return (
-    <nav className="fixed md:flex hidden items-center justify-between top-0 left-0 w-full p-8">
-      <img src="/vnest-logo.svg" alt="" className="w-24" />
+    <nav className="fixed md:flex hidden items-center justify-between top-0 left-0 w-full py-2 px-4 backdrop-blur-md shadow-lg">
+      <img src="/vnest-logo.svg" alt="VNest Logo" className="w-20" />
 
-      <div className="uppercase flex items-center justify-center gap-8 font-bold">
+      <div className="uppercase flex items-center justify-center gap-8 font-bold text-white">
         <a
           href="#home"
           className="w-36 text-center py-2 hover:bg-foreground hover:text-background rounded-xl transition-colors duration-300"
@@ -14,7 +14,7 @@ export default function Navbar() {
           href="#about"
           className="w-36 text-center py-2 hover:bg-foreground hover:text-background rounded-xl transition-colors duration-300"
         >
-          About US
+          About Us
         </a>
         <a
           href="#gallery"
@@ -36,7 +36,7 @@ export default function Navbar() {
         </a>
       </div>
 
-      <img src="/vit-logo.png" alt="" className="w-32" />
+      <img src="/vit-logo.png" alt="VIT Logo" className="w-28" />
     </nav>
   );
 }
