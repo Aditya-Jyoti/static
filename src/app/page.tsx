@@ -1,3 +1,5 @@
+
+import Teampage from "./components/convenor"
 import About from "./components/About";
 
 export default function Home() {
@@ -57,7 +59,9 @@ export default function Home() {
       {/* rest of the data */}
       <section className="gradient p-12">
         <About />
+        <Teampage/>
       </section>
     </section>
+
   );
 }
