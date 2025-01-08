@@ -1,6 +1,7 @@
 
 import Teampage from "./components/convenor"
 import About from "./components/About";
+import Startup from "./components/startup";
 
 export default function Home() {
   return (
@@ -61,6 +62,8 @@ export default function Home() {
         <About />
         <Teampage/>
       </section>
+
+      <Startup/>
     </section>
 
   );
