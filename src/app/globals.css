@@ -6,3 +6,18 @@
   --foreground: #ffffff;
   --background: #000;
 }
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(57, 30, 112, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
