@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Teampage from "./components/convenor"
 
 export default function Home() {
   return (
+<<<<<<< Updated upstream
     <section>
       {/* splash page */}
       {/* desktop */}
@@ -52,5 +54,13 @@ export default function Home() {
         </div>
       </section>
     </section>
+=======
+    <div>
+      <div id="team" className='w-full'>
+        <Teampage/>
+      </div>
+    
+    </div>
+>>>>>>> Stashed changes
   );
 }
