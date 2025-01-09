@@ -70,7 +70,7 @@ const ImageAccordion = () => {
                     <img
                       src={image.src}
                       alt={`${item.title} ${idx + 1}`}
-                      className="h-full object-cover"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 ))}
