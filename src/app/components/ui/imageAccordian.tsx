@@ -27,10 +27,10 @@ const ImageAccordion = () => {
     {
       title: "Others",
       images: [
-        { src: "/images/CRACKUBE LOGO JPG TRANSPARENT.png", href: "" },
-        { src: "/images/FEYNMAN_TECHSOL.png", href: "" },
-        { src: "/images/Chakaralaya Analytics.png", href: "" },
-        { src: "/images/INICIOTEK.jpg", href: "" },
+        { src: "/images/CRACKUBE LOGO JPG TRANSPARENT.png"},
+        { src: "/images/FEYNMAN_TECHSOL.png" },
+        { src: "/images/Chakaralaya Analytics.png"},
+        { src: "/images/INICIOTEK.jpg"},
       ],
     },
   ];
@@ -51,7 +51,10 @@ const ImageAccordion = () => {
             }}
             onClick={() => {
               if (activeIndex !== null && nestedActiveIndex !== null) {
-                window.open(items[activeIndex].images[nestedActiveIndex].href, "_blank");
+                const selectedImage = items[activeIndex].images[nestedActiveIndex];
+                if ('href' in selectedImage && selectedImage.href) {
+                  window.open(selectedImage.href, "_blank");
+                }
               }
             }}
           >
