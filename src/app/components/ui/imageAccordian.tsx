@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const ImageAccordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [nestedActiveIndex, setNestedActiveIndex] = useState<number | null>(null);
+  
   const items = [
     {
       title: "Healthcare",
@@ -11,7 +12,7 @@ const ImageAccordion = () => {
         { src: "/images/JIVAN.png", href: "https://www.jivanhealth.in/aboutus" },
         { src: "/images/CITTAA.jpg", href: "https://cittaa.in/" },
         { src: "/images/Quinproc.jpeg", href: "https://quinproc.co.in/" },
-        {src:"/images/LOGO_MEDxAI_Innovations.jpg", href:"https://www.medxai-innovations.com/"}
+        { src: "/images/LOGO_MEDxAI_Innovations.jpg", href: "https://www.medxai-innovations.com/" }
       ],
     },
     {
@@ -28,19 +29,19 @@ const ImageAccordion = () => {
       images: [
         { src: "/images/CRACKUBE LOGO JPG TRANSPARENT.png", href: "" },
         { src: "/images/FEYNMAN_TECHSOL.png", href: "" },
-        { src: "/images/Chakaralaya Analytics.png", href:"" },
-        {src:"images/INICIOTEK.jpg", href:''},
+        { src: "/images/Chakaralaya Analytics.png", href: "" },
+        { src: "/images/INICIOTEK.jpg", href: "" },
       ],
     },
   ];
 
   return (
     <div className="max-w-6xl mx-auto px-4">
-      <div className="relative z-10 flex items-center justify-center space-x-4">
+      <div className="relative z-10 flex items-stretch justify-center">
         {items.map((item, index) => (
           <div
             key={index}
-            className={`relative flex items-center justify-center overflow-hidden h-[450px] rounded-lg cursor-pointer transition-all duration-500 border object-contain ${
+            className={`relative flex items-center justify-center overflow-hidden h-[450px] rounded-lg cursor-pointer transition-all duration-500 border ${
               activeIndex === index ? "w-full" : "w-[130px]"
             }`}
             onMouseEnter={() => setActiveIndex(index)}
@@ -54,32 +55,34 @@ const ImageAccordion = () => {
               }
             }}
           >
-            <div className="absolute inset-0 w-full h-full transition-all duration-500" />
+            <div className="absolute inset-0 w-full h-full bg-black/20 transition-all duration-500" />
             
             {activeIndex === index && (
-              <div className="absolute top-16 right-25 flex flex-row gap-2">
-                {item.images.map((image, idx) => (
-                  <div
-                    key={idx}
-                    className={`relative flex-shrink-0 transition-all duration-500 ${
-                      nestedActiveIndex === idx ? "w-80 h-96" : "w-32 h-64"
-                    } rounded-lg overflow-hidden bg-gray-200`}
-                    onMouseEnter={() => setNestedActiveIndex(idx)}
-                    onMouseLeave={() => setNestedActiveIndex(null)}
-                  >
-                    <img
-                      src={image.src}
-                      alt={`${item.title} ${idx + 1}`}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                ))}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-full h-full flex">
+                  {item.images.map((image, idx) => (
+                    <div
+                      key={idx}
+                      className={`relative transition-all duration-500 ${
+                        nestedActiveIndex === idx ? "w-full" : "w-1/4"
+                      } h-full`}
+                      onMouseEnter={() => setNestedActiveIndex(idx)}
+                      onMouseLeave={() => setNestedActiveIndex(null)}
+                    >
+                      <img
+                        src={image.src}
+                        alt={`${item.title} ${idx + 1}`}
+                        className="h-full w-full object-contain bg-white"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
             <div
               className={`absolute text-lg font-semibold text-white transition-all duration-500 ${
-                activeIndex === index ? "rotate-0 top-8 " : "rotate-[-90deg]"
+                activeIndex === index ? "rotate-0 top-8 hidden" : "-rotate-90"
               }`}
             >
               {item.title}
