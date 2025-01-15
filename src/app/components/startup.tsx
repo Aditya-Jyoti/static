@@ -16,11 +16,15 @@ const Startup = () => {
     { id: 5, src: '/images/MAFKIN ROBOTICS.jpeg', section: 'robotics', href: 'https://www.mafkinrobotics.com/' },
     { id: 6, src: '/images/Mechatronix India.jpeg', section: 'robotics', href: 'https://www.mechonyx.com/' },
     { id: 7, src: '/images/Centurion Mobility.jpeg', section: 'robotics', href: 'https://centurionmobility.com/' },
-    { id: 8, src: '/images/STEMTEC_logo.jpg', section: 'robotics', href: 'https://www.linkedin.com/company/stemtec-ai-robotics' },
-    { id: 9, src: '/images/CRACKUBE LOGO JPG TRANSPARENT.png', section: 'others', href: '' },
-    { id: 10, src: '/images/FEYNMAN TECHSOL.png', section: 'others', href: '' },
-    { id: 11, src: '/images/Chakaralaya Analytics.png', section: 'others', href: '' },
-    { id: 12, src: '/images/INICIOTEK.jpg', section: 'others', href: '' },
+    { id: 8, src: '/images/Mechonix_D2R.png', section: 'robotics', href: 'https://www.mechonyx.com/' },
+    { id: 9, src: '/images/STEMTEC_logo.jpg', section: 'robotics', href: 'https://www.linkedin.com/company/stemtec-ai-robotics' },
+    { id: 10, src: '/images/CRACKUBE LOGO JPG TRANSPARENT.png', section: 'others', href: '' },
+    { id: 11, src: '/images/FEYNMAN TECHSOL.png', section: 'others', href: '' },
+    { id: 12, src: '/images/ZVIA.jpg', section: 'others', href: '' },
+    { id: 13, src: '/images/Chakaralaya Analytics.png', section: 'others', href: '' },
+    { id: 14, src: '/images/INICIOTEK.jpg', section: 'others', href: '' },
+    { id: 15, src: '/images/SpectoV.jpg', section: 'others', href: '' },
+    { id: 16, src: '/images/The Energy Company.png', section: 'others', href: '' },
   ];
 
   return (

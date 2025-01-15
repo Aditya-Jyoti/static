@@ -22,7 +22,7 @@ export default function About() {
         <img src="/abt-vnest.jpeg" alt="" className="w-[36rem]" />
       </div>
       <div className="flex md:flex-row flex-col gap-4 justify-between">
-        <img src="/vitc.jpg" alt="" className="w-[36rem] md:flex hidden" />
+        <img src="/vitc1.png" alt="" className="w-[38rem] md:flex hidden" />
         <div className="flex flex-col gap-4">
           <span className="md:text-7xl text-4xl font-bold md:text-right">
             About VIT

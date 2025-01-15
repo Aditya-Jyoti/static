@@ -4,6 +4,7 @@ import Startup from "./components/startup";
 import ImageCarousel from "./components/carosal";
 
 import Image from "next/image";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -69,7 +70,6 @@ export default function Home() {
             "IMG_4818.jpg",
             "IMG_4839.JPG",
             "IMG_4844.JPG",
-            "IMG_4848.JPG",
             "IMG_4850.JPG",
             "IMG_4854.JPG",
             "IMG_4863.JPG",
@@ -92,6 +92,8 @@ export default function Home() {
           <Startup />
         </div>
       </section>
+
+      <Contact />
 
     </section>
   );
