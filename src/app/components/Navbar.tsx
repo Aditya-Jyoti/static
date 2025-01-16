@@ -26,7 +26,7 @@ export default function Navbar() {
           href="#initiatives"
           className="w-36 text-center py-2 hover:bg-foreground hover:text-background rounded-xl transition-colors duration-300"
         >
-          Initiatives
+          Our Startups
         </a>
         <a
           href="#contact"
