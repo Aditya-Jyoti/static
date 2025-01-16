@@ -22,7 +22,7 @@ export default function Home() {
         <Card
           name="Dr. Sasikumar M"
           designation="Director, V-NEST"
-          img="/ppl/sasi.jpg"
+          img="/ppl/sasi1.jpg"
         />
         <Card
           name="Dr. Ravi V "
