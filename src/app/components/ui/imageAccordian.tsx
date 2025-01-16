@@ -28,13 +28,10 @@ const ImageAccordion = () => {
     {
       title: "Others",
       images: [
-        { src: "/images/ZVIA.jpg" , href:"https://zvia.tech/"},
-        { src: "/images/SpectoV.jpg" , href: "https://www.spectov.com"},
-        { src: "/images/INICIOTEK.jpg" , href: "https://www.iniciotek.com/"},
         { src: "/images/CRACKUBE LOGO JPG TRANSPARENT.png"},
         { src: "/images/FEYNMAN_TECHSOL.png" },
         { src: "/images/Chakaralaya Analytics.png"},
-        { src: "/images/The Energy Company.png"},
+        { src: "/images/INICIOTEK.jpg"},
       ],
     },
   ];
@@ -70,7 +67,7 @@ const ImageAccordion = () => {
                   {item.images.map((image, idx) => (
                     <div
                       key={idx}
-                      className={`relative transition-all duration-500 border-2 border-black ${
+                      className={`relative transition-all duration-500 ${
                         nestedActiveIndex === idx ? "w-full" : "w-1/4"
                       } h-full`}
                       onMouseEnter={() => setNestedActiveIndex(idx)}
