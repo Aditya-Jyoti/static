@@ -24,7 +24,7 @@ const Startup = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id="initiatives" className="flex flex-col items-center justify-center">
       <div className="flex items-center justify-center">
         <h1
           className="text-4xl font-bold text-center mb-18 text-white"

@@ -21,6 +21,7 @@ const ImageAccordion = () => {
         { src: "/images/MAFKIN ROBOTICS.jpeg", href: "https://www.mafkinrobotics.com/" },
         { src: "/images/Mechatronix India.jpeg", href: "https://www.mechonyx.com/" },
         { src: "/images/Centurion Mobility.jpeg", href: "https://centurionmobility.com/" },
+        { src: "/images/Mechonix_D2R.png", href: "https://www.mechonyx.com/" },
         { src: "/images/STEMTEC_logo.jpg", href: "https://www.linkedin.com/company/stemtec-ai-robotics" }
       ],
     },

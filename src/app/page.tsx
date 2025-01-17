@@ -4,6 +4,7 @@ import Startup from "./components/startup";
 import ImageCarousel from "./components/carosal";
 
 import Image from "next/image";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
             <span className="md:text-[1.5rem] text-lg">
               we nurture you to fly high
             </span>
-            <a className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
+            <a href="#about" className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
               know more
             </a>
           </div>
@@ -52,7 +53,7 @@ export default function Home() {
             <span className="md:text-[1.5rem] text-lg">
               we nurture you to fly high
             </span>
-            <a className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
+            <a href="#about" className="flex items-center gap-2 hover:cursor-pointer justify-center mt-4 bg-foreground text-background py-1 md:text-lg text-sm font-bold md:w-[10%] w-[30%] rounded-xl hover:bg-gray-200 transition-colors duration-300">
               know more
             </a>
           </div>
@@ -69,7 +70,6 @@ export default function Home() {
             "IMG_4818.jpg",
             "IMG_4839.JPG",
             "IMG_4844.JPG",
-            "IMG_4848.JPG",
             "IMG_4850.JPG",
             "IMG_4854.JPG",
             "IMG_4863.JPG",
@@ -84,7 +84,7 @@ export default function Home() {
           <h1 className="md:text-7xl text-5xl font-bold flex w-full items-center justify-center md:-mb-24 mt-12">
             Benefits
           </h1>
-          <Image src="/graph.png" alt="graph" width={1600} height={500} className="md:flex hidden" />
+          <Image src="/graph.svg" alt="graph" width={1600} height={500} className="md:flex hidden" />
           <Image src="/ben2.png" alt="graph" width={1600} height={1600}  className="md:hidden flex h-full my-8"/>
         </div>
 
@@ -92,6 +92,8 @@ export default function Home() {
           <Startup />
         </div>
       </section>
+
+      <Contact />
 
     </section>
   );

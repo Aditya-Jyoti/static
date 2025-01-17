@@ -3,7 +3,7 @@ export default function About() {
     <section className="flex flex-col gap-12 mx-auto md:w-[90%]" id="about">
       <div className="flex md:flex-row flex-col gap-4 justify-between">
         <div className="flex flex-col gap-4 ">
-          <span className="md:text-7xl text-4xl font-bold">About V-NEST</span>
+          <span className="md:text-6xl text-3xl font-bold">About V-NEST</span>
           <span className="md:text-2xl text-xl font-normal">
             VIT Chennai boasts a vibrant innovation ecosystem through V-NEST VIT
             Chennai Startup and Research Foundation, that supports students,
@@ -22,9 +22,9 @@ export default function About() {
         <img src="/abt-vnest.jpeg" alt="" className="w-[36rem]" />
       </div>
       <div className="flex md:flex-row flex-col gap-4 justify-between">
-        <img src="/vitc.jpg" alt="" className="w-[36rem] md:flex hidden" />
+        <img src="/vitc1.png" alt="" className="w-[38rem] md:flex hidden" />
         <div className="flex flex-col gap-4">
-          <span className="md:text-7xl text-4xl font-bold md:text-right">
+          <span className="md:text-6xl text-3xl font-bold md:text-right">
             About VIT
           </span>
           <span className="md:text-2xl text-xl font-normal md:text-right">

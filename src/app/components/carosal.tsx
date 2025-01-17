@@ -1,4 +1,5 @@
 "use client";
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -13,7 +14,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % totalImages);
-    }, 3000);
+    }, 1750);
 
     return () => clearInterval(timer);
   }, [totalImages]);
@@ -32,7 +33,16 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative h-96 my-12 overflow-hidden ">
+    <div id="gallery" className="relative h-96 my-12 overflow-hidden ">
+
+      <button onClick={()=>setCurrentIndex((prev) => (prev - 1) % totalImages)} className="absolute size-10 rounded-full top-1/2 z-30 mx-4">
+        <ArrowLeftCircleIcon className="size-10 opacity-60 hover:opacity-75 transition-opacity duration-200" />
+      </button>
+
+      <button onClick={()=>setCurrentIndex((prev) => (prev + 1) % totalImages)} className="absolute size-10 rounded-full top-1/2 z-30 mx-4 right-0">
+        <ArrowRightCircleIcon className="size-10 opacity-60 hover:opacity-75 duration-200" />
+      </button>
+
       <div className="relative flex h-full w-full items-center justify-center">
         {images.map((image, index) => {
           const offset = (index - currentIndex + totalImages) % totalImages;
@@ -49,8 +59,8 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
                 src={`/car/${image}`}
                 alt={`Slide ${index + 1}`}
                 className="h-full w-full rounded-lg object-cover"
-                width={250}
-                height={250}
+                width={1024}
+                height={1024}
               />
             </div>
           );
